@@ -1,3 +1,10 @@
+---
+layout: home
+title: Home
+permalink: /
+nav_order: 1
+---
+
 # GNOME Websites Framework
 
 The GNOME Websites Framework is a CSS library built using [Tailwind CSS](https://tailwindcss.com/) to be used to craft and style Websites following GNOME's own visual identity. It eases the styling process of the websites and enables better consistency between them while keeping a beautiful and GNOMEish look.
@@ -9,6 +16,8 @@ The GNOME UI library uses [Feather Icons](https://feathericons.com/) by default.
 The GNOME UI Documentation is developed using [Jekyll](https://jekyllrb.com/) and Gitlab pages, and it uses a theme called [Just The Docs](https://pmarsceill.github.io/just-the-docs/) and is available [here](https://teams.pages.gitlab.gnome.org/Engagement/websites/gnome-websites-framework/). 
 
 The project documentation is placed in the `documentation` folder.
+
+You might check the current status of the project regarding backlog, evaluation and implementation of its main components [here](https://gitlab.gnome.org/Teams/Engagement/websites/gnome-websites-framework/-/issues/23).
 
 ## Getting started
 
@@ -33,7 +42,7 @@ The steps below will provide you guidance in how to setup the dependencies and h
     ```
 - Install the Documentation (Jekyll) dependencies
     ```sh
-    gem install bundler:2.2.11
+    gem install bundler:2.2.15
     ```
 
 ### Building the Library (CSS/Tailwind)
@@ -71,21 +80,26 @@ This command will output the following styles
 ### Building the Docs (Jekyll)
 
 - Install the Bundler dependencies (first-time)
-    ```
+    ```sh
     cd documentation/
     bundle install
     ```
+- You also need to copy the README.md file that is used as the Index page (Usually only needed once)
+    ```sh
+    cp ../README.md ./index.md
+    ```
 - Run the documentation server:
+    ```sh
+    bundle exec jekyll serve --watch
     ```
-    bundle exec jekyll serve
-    ```
-- Navigate to http://127.0.0.1:4000/Engagement/websites/gnome-websites-framework/ in your browser to see it running.
+- Navigate to `http://localhost:4000/Engagement/websites/gnome-websites-framework/` in your browser to see it running.
 
 ## Contributing
 
 To contribute, open merge requests at https://gitlab.gnome.org/Teams/Engagement/websites/general-website-resources.
 
-Commit messages should follow the [GNOME commit message
-guidelines](https://wiki.gnome.org/Git/CommitMessages).
+Commit messages should follow the [GNOME commit message guidelines](https://wiki.gnome.org/Git/CommitMessages).
 
 Join our conversations on [Matrix or IRC](https://wiki.gnome.org/Community/GettingInTouch/IRC). You can find us at the #engagement:gnome.org channel.
+
+If you're a **GSoC Student** please give a read to the [GSoC FAQ](https://gitlab.gnome.org/Teams/Engagement/websites/gnome-websites-framework/-/issues/35)

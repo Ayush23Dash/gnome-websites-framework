@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Components
-permalink: /components/
 nav_order: 2
+permalink: /components/
 has_children: true
 ---

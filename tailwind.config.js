@@ -21,7 +21,7 @@ module.exports = {
         gray: {
           100: '#F2F2F2',
           200: '#D9D9D9',
-          300: '#A6A6A6',
+          300: '#BCBCBC',
           400: '#A6A6A6',
           500: '#8C8C8C',
           600: '#737373',
@@ -99,13 +99,18 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"Source Sans Pro"',
+        'Source Sans Pro',
         'Cantarell',
-        '"Droid Sans"',
+        'Droid Sans',
         'Ubuntu',
-        '"DejaVu Sans"',
+        'DejaVu Sans',
         'Arial',
         'sans-serif',
+      ],
+      mono: [
+        'Monaco',
+        'monospace',
+        'Menlo',
       ],
     },
     fontSize: {
